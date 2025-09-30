@@ -1,15 +1,14 @@
-# WordPress
-   /vendor/
-   /node_modules/
-   composer.lock
-   
-   # OS
-   .DS_Store
-   Thumbs.db
-   
-   # IDE
-   .vscode/
-   .idea/
-   
-   # Laragon local
-   wp-config-local.php
+# WordPress core
+/wp-admin/
+/wp-includes/
+/wp-content/
+!/wp-content/plugins/sectorize/
+
+# Keep only plugin files
+/*
+!/.editorconfig
+!/.gitignore
+!/README.md
+!/sectorize.php
+!/includes/
+!/languages/
