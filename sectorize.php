@@ -75,3 +75,16 @@ function sectorize_load_textdomain() {
 	);
 }
 add_action( 'plugins_loaded', 'sectorize_load_textdomain' );
+
+/**
+ * Load plugin classes.
+ *
+ * @return void
+ */
+function sectorize_load_classes() {
+	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-rewrite.php';
+	
+	// Initialize rewrite functionality.
+	Sectorize_Rewrite::init();
+}
+add_action( 'plugins_loaded', 'sectorize_load_classes' );
