@@ -1,0 +1,15 @@
+# WordPress
+   /vendor/
+   /node_modules/
+   composer.lock
+   
+   # OS
+   .DS_Store
+   Thumbs.db
+   
+   # IDE
+   .vscode/
+   .idea/
+   
+   # Laragon local
+   wp-config-local.php
