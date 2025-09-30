@@ -6,8 +6,8 @@ WordPress plugin that transforms author archives into sector-based content organ
 
 Currently implementing core functionality:
 - [x] Phase 1a: Plugin skeleton & rewrite rules
-- [ ] Phase 1b: Nickname mapping
-- [ ] Phase 1c: Legacy redirects
+- [x] Phase 1b: Nickname mapping
+- [x] Phase 1c: Legacy redirects
 - [ ] Phase 1d: Link overrides
 - [ ] Phase 1e: SEO titles
 - [ ] Phase 1f: Schema.org markup
