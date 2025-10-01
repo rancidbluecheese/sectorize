@@ -1,14 +1,13 @@
-# Add to .gitattributes
-@"
 # Exclude from distribution
-.gitignore      export-ignore
-.editorconfig   export-ignore
-.gitattributes  export-ignore
-.github/        export-ignore
-/tests/         export-ignore
-/composer.*     export-ignore
-/package*.json  export-ignore
-/node_modules/  export-ignore
-/phpunit.xml*   export-ignore
-.*              export-ignore
-"@ | Out-File -FilePath .\.gitattributes -Encoding UTF8
+.gitignore export-ignore
+.editorconfig export-ignore
+.gitattributes export-ignore
+.github/ export-ignore
+/tests/ export-ignore
+/composer.json export-ignore
+/composer.lock export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/node_modules/ export-ignore
+/phpunit.xml export-ignore
+/phpunit.xml.dist export-ignore
