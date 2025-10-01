@@ -1,14 +1,42 @@
-# WordPress core
-/wp-admin/
-/wp-includes/
-/wp-content/
-!/wp-content/plugins/sectorize/
+# WordPress
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
 
-# Keep only plugin files
-/*
-!/.editorconfig
-!/.gitignore
-!/README.md
-!/sectorize.php
-!/includes/
-!/languages/
+# Build artifacts
+*.zip
+/dist/
+/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+wp-config-local.php
+
+# Testing
+/coverage/
+phpunit.xml
+.phpunit.result.cache
+
+# Temporary
+/tmp/
+/temp/
