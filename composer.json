@@ -1,0 +1,17 @@
+{
+    "name": "rancidbluecheese/sectorize",
+    "description": "Transforms author archives into sector-based content organization",
+    "type": "wordpress-plugin",
+    "require-dev": {
+        "wp-coding-standards/wpcs": "2",
+        "dealerdirect/phpcodesniffer-composer-installer": "0.7"
+    },
+    "license": "GPL-2.0-or-later",
+    "require": {},
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wp-coding-standards/wpcs": true
+        }
+    }
+}
