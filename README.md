@@ -11,7 +11,7 @@ Currently implementing core functionality:
 - [x] Phase 1d: Link overrides
 - [x] Phase 1e: SEO titles
 - [x] Phase 1f: Schema.org markup
-- [ ] Phase 1g: Cleanup & uninstall
+- [x] Phase 1g: Cleanup & uninstall
 
 ## Development
 
