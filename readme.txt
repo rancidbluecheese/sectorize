@@ -2,7 +2,7 @@
 Contributors: turtlesoup
 Tags: author, archive, seo, schema, organization
 Requires at least: 6.0
-Tested up to: 6.7
+Tested up to: 6.8
 Stable tag: 0.1.0
 Requires PHP: 7.4
 License: GPLv2 or later

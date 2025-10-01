@@ -63,20 +63,6 @@ function sectorize_register_rewrite_rules() {
 add_action( 'init', 'sectorize_register_rewrite_rules' );
 
 /**
- * Load plugin textdomain for translations.
- *
- * @return void
- */
-function sectorize_load_textdomain() {
-	load_plugin_textdomain(
-		'sectorize',
-		false,
-		dirname( plugin_basename( __FILE__ ) ) . '/languages'
-	);
-}
-add_action( 'plugins_loaded', 'sectorize_load_textdomain' );
-
-/**
  * Load plugin classes.
  *
  * @return void
