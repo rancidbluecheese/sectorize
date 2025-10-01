@@ -86,11 +86,13 @@ function sectorize_load_classes() {
 	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-redirect.php';
 	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-links.php';
 	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-seo.php';
+	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-schema.php';
 	
 	// Initialize functionality.
 	Sectorize_Rewrite::init();
 	Sectorize_Redirect::init();
 	Sectorize_Links::init();
 	Sectorize_SEO::init();
+	Sectorize_Schema::init();
 }
 add_action( 'plugins_loaded', 'sectorize_load_classes' );
