@@ -84,9 +84,11 @@ add_action( 'plugins_loaded', 'sectorize_load_textdomain' );
 function sectorize_load_classes() {
 	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-rewrite.php';
 	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-redirect.php';
+	require_once SECTORIZE_PLUGIN_DIR . 'includes/class-sectorize-links.php';
 	
 	// Initialize functionality.
 	Sectorize_Rewrite::init();
 	Sectorize_Redirect::init();
+	Sectorize_Links::init();
 }
 add_action( 'plugins_loaded', 'sectorize_load_classes' );
