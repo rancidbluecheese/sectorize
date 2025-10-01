@@ -1,0 +1,10 @@
+# Ignore dev files when creating release archives
+/.gitignore      export-ignore
+/.editorconfig   export-ignore
+/.gitattributes  export-ignore
+/.github/        export-ignore
+/composer.*      export-ignore
+/package*.json   export-ignore
+/node_modules/   export-ignore
+/tests/          export-ignore
+/phpunit.xml*    export-ignore
