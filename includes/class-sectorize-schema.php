@@ -40,6 +40,11 @@ class Sectorize_Schema {
 			return;
 		}
 
+		// Skip password-protected or private posts.
+		if ( post_password_required() ) {
+			return;
+		}
+
 		global $post;
 
 		if ( ! $post ) {

@@ -1,13 +1,15 @@
-# Exclude from distribution
-.gitignore export-ignore
-.editorconfig export-ignore
-.gitattributes export-ignore
-.github/ export-ignore
-/tests/ export-ignore
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Exclude files from release archives
+/.github export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/.editorconfig export-ignore
 /composer.json export-ignore
 /composer.lock export-ignore
-/package.json export-ignore
-/package-lock.json export-ignore
-/node_modules/ export-ignore
-/phpunit.xml export-ignore
-/phpunit.xml.dist export-ignore
+/phpcs.xml.dist export-ignore
+/tests export-ignore
+/CONTRIBUTING.md export-ignore
+/SECURITY.md export-ignore
+/.vscode export-ignore

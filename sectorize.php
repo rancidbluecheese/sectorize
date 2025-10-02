@@ -3,7 +3,7 @@
  * Plugin Name: Sectorize
  * Plugin URI: https://github.com/rancidbluecheese/sectorize
  * Description: Transforms author archives into sector-based content organization with structured data and SEO optimization.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: Marg
@@ -22,12 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Plugin constants.
-define( 'SECTORIZE_VERSION', '0.1.0' );
+define( 'SECTORIZE_VERSION', '0.1.1' );
 define( 'SECTORIZE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SECTORIZE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 /**
- * Activation hook: Flush rewrite rules.
+ * Activation hook: Flush rewrite rules and set activation notice.
  *
  * @return void
  */
@@ -35,6 +35,9 @@ function sectorize_activate() {
 	// Register rewrite rules before flushing.
 	sectorize_register_rewrite_rules();
 	flush_rewrite_rules();
+	
+	// Set transient for activation notice.
+	set_transient( 'sectorize_activated', true, 5 );
 }
 register_activation_hook( __FILE__, 'sectorize_activate' );
 
@@ -63,6 +66,20 @@ function sectorize_register_rewrite_rules() {
 add_action( 'init', 'sectorize_register_rewrite_rules' );
 
 /**
+ * Load plugin textdomain for translations.
+ *
+ * @return void
+ */
+function sectorize_load_textdomain() {
+	load_plugin_textdomain(
+		'sectorize',
+		false,
+		dirname( plugin_basename( __FILE__ ) ) . '/languages'
+	);
+}
+add_action( 'plugins_loaded', 'sectorize_load_textdomain' );
+
+/**
  * Load plugin classes.
  *
  * @return void
@@ -82,3 +99,20 @@ function sectorize_load_classes() {
 	Sectorize_Schema::init();
 }
 add_action( 'plugins_loaded', 'sectorize_load_classes' );
+
+/**
+ * Display admin notice on activation.
+ *
+ * @return void
+ */
+function sectorize_activation_notice() {
+	if ( get_transient( 'sectorize_activated' ) ) {
+		?>
+		<div class="notice notice-success is-dismissible">
+			<p><?php esc_html_e( 'Sectorize activated successfully! Permalinks have been flushed.', 'sectorize' ); ?></p>
+		</div>
+		<?php
+		delete_transient( 'sectorize_activated' );
+	}
+}
+add_action( 'admin_notices', 'sectorize_activation_notice' );

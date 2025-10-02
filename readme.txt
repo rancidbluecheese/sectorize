@@ -2,8 +2,8 @@
 Contributors: turtlesoup
 Tags: author, archive, seo, schema, organization
 Requires at least: 6.0
-Tested up to: 6.8
-Stable tag: 0.1.0
+Tested up to: 6.7
+Stable tag: 0.1.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -127,6 +127,15 @@ Yes! Tested with WP Super Cache, W3 Total Cache, and LiteSpeed Cache.
 4. SEO-optimized titles in browser and search results
 
 == Changelog ==
+
+= 0.1.1 =
+* Security: Add password-protected post check to schema output
+* Security: Add error handling to preg_replace in link overrides
+* Security: Add global variable validation in author posts link
+* Enhancement: Add activation notice for better user experience
+* Enhancement: Add wp_cache_flush() to uninstall cleanup
+* Enhancement: Add includes/index.php to prevent directory listing
+* Fix: Clean up activation transient on uninstall
 
 = 0.1.0 =
 * Initial release

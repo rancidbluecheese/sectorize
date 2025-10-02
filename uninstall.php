@@ -23,6 +23,9 @@ function sectorize_uninstall_cleanup() {
 	// Flush rewrite rules to remove custom /sector/ rules.
 	flush_rewrite_rules();
 
+	// Clear object cache to remove any cached rewrite data.
+	wp_cache_flush();
+
 	// If you add custom options in the future, delete them here:
 	// delete_option( 'sectorize_custom_option' );
 	// delete_site_option( 'sectorize_custom_option' ); // For multisite.
@@ -32,6 +35,9 @@ function sectorize_uninstall_cleanup() {
 
 	// If you add custom user meta in the future, delete it here:
 	// delete_metadata( 'user', 0, 'sectorize_custom_user_meta', '', true );
+
+	// Clean up activation transient if it still exists.
+	delete_transient( 'sectorize_activated' );
 
 	// Note: We do NOT delete user nicknames as they are core WordPress data
 	// and may be used by other plugins or themes.

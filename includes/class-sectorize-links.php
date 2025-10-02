@@ -68,7 +68,7 @@ class Sectorize_Links {
 	public static function override_author_posts_link( $link ) {
 		global $authordata;
 
-		if ( ! isset( $authordata->ID ) ) {
+		if ( ! isset( $authordata->ID ) || ! $authordata ) {
 			return $link;
 		}
 
@@ -86,13 +86,18 @@ class Sectorize_Links {
 		// Build the sector URL.
 		$sector_url = home_url( '/sector/' . $nickname . '/' );
 
-		// Replace the old URL in the HTML link.
-		$link = preg_replace(
+		// Replace the old URL in the HTML link with error handling.
+		$new_link = preg_replace(
 			'#href=[\'"]([^\'"]+)[\'"]#',
 			'href="' . esc_url( $sector_url ) . '"',
 			$link
 		);
 
-		return $link;
+		// Return original link if regex fails.
+		if ( $new_link === null ) {
+			return $link;
+		}
+
+		return $new_link;
 	}
 }

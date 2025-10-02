@@ -1,17 +1,31 @@
 {
-    "name": "rancidbluecheese/sectorize",
-    "description": "Transforms author archives into sector-based content organization",
-    "type": "wordpress-plugin",
-    "require-dev": {
-        "wp-coding-standards/wpcs": "2",
-        "dealerdirect/phpcodesniffer-composer-installer": "0.7"
-    },
-    "license": "GPL-2.0-or-later",
-    "require": {},
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "wp-coding-standards/wpcs": true
-        }
+  "name": "rancidbluecheese/sectorize",
+  "description": "WordPress plugin that transforms author archives into sector-based content organization",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Marg",
+      "homepage": "https://github.com/rancidbluecheese"
     }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7",
+    "wp-coding-standards/wpcs": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=phpcs.xml.dist",
+    "phpcbf": "phpcbf --standard=phpcs.xml.dist",
+    "lint": "phpcs --standard=phpcs.xml.dist",
+    "format": "phpcbf --standard=phpcs.xml.dist"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
 }
