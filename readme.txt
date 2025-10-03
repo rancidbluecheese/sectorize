@@ -3,7 +3,7 @@ Contributors: turtlesoup
 Tags: author, archive, seo, schema, organization
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -127,6 +127,15 @@ Yes! Tested with WP Super Cache, W3 Total Cache, and LiteSpeed Cache.
 4. SEO-optimized titles in browser and search results
 
 == Changelog ==
+
+= 0.1.3 =
+* Added plugin guard constant to prevent redeclaration errors
+* Bumped version metadata to 0.1.3
+
+= 0.1.2 =
+* Fix: Correct plugin header version mismatch causing activation errors
+* Enhancement: Add hybrid .gitattributes for LF normalization and clean exports
+* Maintenance: Sync version numbers across all plugin files
 
 = 0.1.1 =
 * Security: Add password-protected post check to schema output
