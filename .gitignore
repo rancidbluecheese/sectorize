@@ -39,4 +39,4 @@ phpunit.xml
 
 # Temporary
 /tmp/
-/temp/
+/temp/check/
