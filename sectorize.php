@@ -3,7 +3,7 @@
  * Plugin Name: Sectorize
  * Plugin URI: https://github.com/rancidbluecheese/sectorize
  * Description: Transforms author archives into sector-based content organization with structured data and SEO optimization.
- * Version: 0.1.3
+ * Version: 0.1.4
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: Marg
@@ -27,7 +27,7 @@ if ( defined( 'SECTORIZE_VERSION' ) ) {
 }
 
 // Plugin constants.
-define( 'SECTORIZE_VERSION', '0.1.3' );
+define( 'SECTORIZE_VERSION', '0.1.4' );
 define( 'SECTORIZE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SECTORIZE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
@@ -69,20 +69,6 @@ function sectorize_register_rewrite_rules() {
 	);
 }
 add_action( 'init', 'sectorize_register_rewrite_rules' );
-
-/**
- * Load plugin textdomain for translations.
- *
- * @return void
- */
-function sectorize_load_textdomain() {
-	load_plugin_textdomain(
-		'sectorize',
-		false,
-		dirname( plugin_basename( __FILE__ ) ) . '/languages'
-	);
-}
-add_action( 'plugins_loaded', 'sectorize_load_textdomain' );
 
 /**
  * Load plugin classes.

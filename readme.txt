@@ -2,7 +2,7 @@
 Contributors: turtlesoup
 Tags: author, archive, seo, schema, organization
 Requires at least: 6.0
-Tested up to: 6.7
+Tested up to: 6.8
 Stable tag: 0.1.3
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -127,6 +127,11 @@ Yes! Tested with WP Super Cache, W3 Total Cache, and LiteSpeed Cache.
 4. SEO-optimized titles in browser and search results
 
 == Changelog ==
+
+= 0.1.4 =
+* Fix: Remove deprecated load_plugin_textdomain() call (WordPress.org requirement)
+* Fix: Update "Tested up to" header to WordPress 6.8
+* Maintenance: WordPress.org automated check compliance
 
 = 0.1.3 =
 * Added plugin guard constant to prevent redeclaration errors

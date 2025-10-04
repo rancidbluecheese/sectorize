@@ -95,3 +95,6 @@ Created by [Marg Choco](https://ictstart.com) | Originally developed for ICTStar
 - [x] Plugin tested on WordPress 6.0+
 - [ ] WordPress.org submission (Phase 2 in progress)
 
+---
+
+**Transform your content organization with Sectorize** 🎯
