@@ -13,6 +13,7 @@ An **elegant, plug-and-play** WordPress plugin that transforms author archives i
 ## 🌟 Live Demo
 
 **See it in action at [ICTStart.com](https://ictstart.com):**
+
 - [Article Sector](https://ictstart.com/sector/article/)
 - [News Sector](https://ictstart.com/sector/news/)
 - [Insights Sector](https://ictstart.com/sector/insights/)
@@ -20,15 +21,19 @@ An **elegant, plug-and-play** WordPress plugin that transforms author archives i
 ## 🎯 Perfect For
 
 ### Content Creators & Bloggers
+
 Organize content by type without showing individual author names on every post.
 
 ### Industry Portals  
+
 Create sectors like "Finance," "Technology," "Healthcare" for clean content organization.
 
 ### Corporate Sites
+
 Organize by department: "Marketing," "Sales," "Support" with automatic sector archives.
 
 ### Regional Content
+
 Geographic organization: "North America," "Europe," "Asia Pacific."
 
 ## 🚀 Quick Start
@@ -40,16 +45,18 @@ Geographic organization: "North America," "Europe," "Asia Pacific."
 5. **Done!** Content appears at `/sector/nickname/`
 
 ### Example Setup
-```
-Username: one
+
+```Username: one
 Nickname: Insights  
 Role: Contributor
 ```
+
 Posts assigned to this user appear at `/sector/insights/`
 
 ## ✨ How It Works
 
 Sectorize cleverly repurposes WordPress's author system:
+
 - **Users = Sectors**: Each user represents a content sector
 - **Nicknames = URLs**: User nicknames become `/sector/{nickname}/` URLs  
 - **Posts = Content**: Assign posts to users for automatic sector organization
@@ -66,6 +73,7 @@ Sectorize cleverly repurposes WordPress's author system:
 ## 🎨 Default Settings
 
 Includes sensible defaults:
+
 - Sector base: `sector` (creates `/sector/name/` URLs)
 - Collective author: Administrator nickname
 - Schema source: Site's built-in metadata
@@ -74,23 +82,3 @@ Includes sensible defaults:
 ## 📄 License
 
 GPL v2 or later - fully open source
-
-## 🤝 Support
-
-- **Issues**: [GitHub Issues](https://github.com/rancidbluecheese/sectorize/issues)
-- **Development**: Active development on GitHub
-
-*WordPress.org support forum coming after plugin approval*
-
-## 🏆 Credits
-
-Created by [Marg Choco](https://ictstart.com) | Originally developed for ICTStart.com
-
----
-
-## 🚀 Development Status
-
-**Phase 1 Complete** ✅
-- [x] Core functionality (URL rewriting, redirects, SEO, schema)
-- [x] Plugin tested on WordPress 6.0+
-- [ ] WordPress.org submission (Phase 2 in progress)

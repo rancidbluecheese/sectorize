@@ -18,6 +18,7 @@ If you discover a security vulnerability in Sectorize, please report it responsi
 **DO NOT** open a public issue for security vulnerabilities.
 
 Instead, please email the maintainer directly:
+
 - Create a security advisory on GitHub (preferred)
 - Or open an issue with the title "SECURITY: [brief description]" (details will be kept private)
 
@@ -39,6 +40,7 @@ Instead, please email the maintainer directly:
 ### 🎖️ Recognition
 
 Security researchers who responsibly disclose vulnerabilities will be credited in:
+
 - The security advisory
 - The changelog
 - The README (if desired)
@@ -57,6 +59,7 @@ This plugin follows security best practices:
 ## 📢 Security Updates
 
 Security updates will be:
+
 - Released as soon as possible
 - Announced in the changelog
 - Posted as a GitHub security advisory
@@ -65,6 +68,7 @@ Security updates will be:
 ## 🤝 Safe Harbor
 
 We support safe harbor for security researchers who:
+
 - Make a good faith effort to avoid privacy violations and service disruptions
 - Only interact with accounts they own or have explicit permission to test
 - Do not exploit a vulnerability beyond what's necessary to demonstrate it

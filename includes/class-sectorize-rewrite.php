@@ -51,38 +51,29 @@ class Sectorize_Rewrite {
 		// Sanitize the nickname slug.
 		$nickname = sanitize_text_field( wp_unslash( $nickname ) );
 
+		// Normalize to lowercase for case-insensitive matching.
+		$nickname_lower = strtolower( $nickname );
+
 		// Try to find user by nickname (case-insensitive).
+		// The following line suppresses the slow query warning, as this lookup is intentional.
+		// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
 		$users = get_users(
 			array(
-				'meta_key'     => 'nickname',
-				'meta_value'   => $nickname,
-				'meta_compare' => '=',
-				'number'       => 1,
+				'meta_query' => array(
+					array(
+						'key'     => 'nickname',
+						'value'   => $nickname_lower,
+						'compare' => '=',
+					),
+				),
+				'number'     => 1,
 			)
 		);
 
-		// If found by exact match, set the author ID.
+		// If found, set the author ID.
 		if ( ! empty( $users ) ) {
 			$query->set( 'author', $users[0]->ID );
 			$query->set( 'author_name', '' ); // Clear to prevent conflicts.
-			return;
-		}
-
-		// Fallback: Try case-insensitive search via LIKE.
-		global $wpdb;
-		$user_id = $wpdb->get_var(
-			$wpdb->prepare(
-				"SELECT user_id FROM {$wpdb->usermeta} 
-				WHERE meta_key = 'nickname' 
-				AND LOWER(meta_value) = LOWER(%s) 
-				LIMIT 1",
-				$nickname
-			)
-		);
-
-		if ( $user_id ) {
-			$query->set( 'author', absint( $user_id ) );
-			$query->set( 'author_name', '' );
 		}
 	}
 }

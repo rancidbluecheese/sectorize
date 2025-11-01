@@ -71,17 +71,17 @@ class Sectorize_Schema {
 
 		// Build schema data.
 		$schema = array(
-			'@context'      => 'https://schema.org',
-			'@type'         => 'Article',
-			'headline'      => esc_html( $headline ),
-			'datePublished' => esc_html( $date_published ),
-			'dateModified'  => esc_html( $date_modified ),
-			'author'        => array(
+			'@context'         => 'https://schema.org',
+			'@type'            => 'Article',
+			'headline'         => esc_html( $headline ),
+			'datePublished'    => esc_html( $date_published ),
+			'dateModified'     => esc_html( $date_modified ),
+			'author'           => array(
 				'@type' => 'Organization',
 				'name'  => esc_html( $site_name ),
 				'url'   => esc_url( $site_url ),
 			),
-			'publisher'     => array(
+			'publisher'        => array(
 				'@type' => 'Organization',
 				'name'  => esc_html( $site_name ),
 				'logo'  => array(
@@ -89,7 +89,7 @@ class Sectorize_Schema {
 					'url'   => esc_url( self::get_site_logo() ),
 				),
 			),
-			'url'           => esc_url( $post_url ),
+			'url'              => esc_url( $post_url ),
 			'mainEntityOfPage' => array(
 				'@type' => 'WebPage',
 				'@id'   => esc_url( $post_url ),
@@ -113,7 +113,7 @@ class Sectorize_Schema {
 		// Output JSON-LD.
 		echo "\n" . '<!-- Sectorize Schema.org Article -->' . "\n";
 		echo '<script type="application/ld+json">' . "\n";
-		echo wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT );
+		echo wp_json_encode( $schema );
 		echo "\n" . '</script>' . "\n";
 	}
 

@@ -1,6 +1,7 @@
 # WordPress
-/vendor/
 /node_modules/
+/vendor/
+/vendor/composer/
 composer.lock
 package-lock.json
 
@@ -31,6 +32,8 @@ yarn-error.log*
 .env
 .env.local
 wp-config-local.php
+docker-compose.yml
+*.local.php
 
 # Testing
 /coverage/

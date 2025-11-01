@@ -31,10 +31,10 @@ function sectorize_uninstall_cleanup() {
 	// delete_site_option( 'sectorize_custom_option' ); // For multisite.
 
 	// If you add custom post meta in the future, delete it here:
-	// delete_post_meta_by_key( 'sectorize_custom_meta' );
+	// delete_post_meta_by_key( 'sectorize_custom_meta' );.
 
 	// If you add custom user meta in the future, delete it here:
-	// delete_metadata( 'user', 0, 'sectorize_custom_user_meta', '', true );
+	// delete_metadata( 'user', 0, 'sectorize_custom_user_meta', '', true );.
 
 	// Clean up activation transient if it still exists.
 	delete_transient( 'sectorize_activated' );

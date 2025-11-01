@@ -94,7 +94,7 @@ class Sectorize_Links {
 		);
 
 		// Return original link if regex fails.
-		if ( $new_link === null ) {
+		if ( null === $new_link ) {
 			return $link;
 		}
 

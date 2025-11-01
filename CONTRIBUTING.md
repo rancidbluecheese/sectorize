@@ -6,11 +6,14 @@ Thank you for considering contributing to Sectorize! This document outlines the 
 
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/sectorize.git
    cd sectorize
    ```
+
 3. **Install dependencies**:
+
    ```bash
    composer install
    ```
@@ -38,17 +41,20 @@ composer run phpcbf
 ## 🔀 Git Workflow
 
 1. **Create a feature branch**:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 2. **Make your changes** with clear, atomic commits:
+
    ```bash
    git add .
    git commit -m "Add: Brief description of changes"
    ```
 
 3. **Push to your fork**:
+
    ```bash
    git push origin feature/your-feature-name
    ```
