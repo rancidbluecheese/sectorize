@@ -38,3 +38,4 @@
 /CONTRIBUTING.md  export-ignore
 /SECURITY.md      export-ignore
 /.vscode          export-ignore
+/vendor           export-ignore

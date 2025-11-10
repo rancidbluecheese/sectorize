@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <ruleset name="Sectorize">
-    <description>WordPress Coding Standards for the Sectorize plugin</description>
+    <description>WordPress Coding Standards for the Sectorize</description>
+
 
     <!-- Scan all PHP files -->
     <arg name="extensions" value="php"/>
     <file>.</file>
+
 
     <!-- Exclude vendor and non‑source paths -->
     <exclude-pattern>*/vendor/*</exclude-pattern>
@@ -18,6 +20,7 @@
     <arg value="ps"/>
     <arg name="colors"/>
 
+
     <!-- WordPress standards -->
     <rule ref="WordPress"/>
     <rule ref="WordPress-Extra"/>
@@ -26,9 +29,11 @@
         <exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
     </rule>
 
+
     <!-- PHP compatibility -->
     <config name="testVersion" value="7.4-"/>
     <rule ref="PHPCompatibilityWP"/>
+
 
     <!-- Enforce correct text domain -->
     <rule ref="WordPress.WP.I18n">
@@ -39,6 +44,7 @@
         </properties>
     </rule>
 
+
     <!-- Enforce prefix for globals -->
     <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
         <properties>
@@ -48,8 +54,19 @@
         </properties>
     </rule>
 
-    <!-- Exclude buggy/deprecated sniffs -->
-    <exclude name="PSR12.Functions.ReturnTypeDeclaration"/>
+    <!-- Optional: Reduce noise from overly strict rules -->
+    <rule ref="WordPress.WP.GlobalVariablesOverride">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
+
+    <!-- Allow short array syntax (modern PHP) -->
+    <rule ref="Universal.Arrays.DisallowShortArraySyntax">
+        <severity>0</severity>
+    </rule>
+
+    <rule ref="WordPress">
+    <exclude name="Generic.Functions.CallTimePassByReference" />
+    </rule>
 
     <!-- Minimum supported WP version -->
     <config name="minimum_supported_wp_version" value="6.0"/>

@@ -1,45 +1,56 @@
-# WordPress
+# WordPress dependency and build folders
 /node_modules/
-/vendor/
-/vendor/composer/
+​/vendor/
+​/vendor/composer/
+
+# Lock files for PHP/npm
 composer.lock
 package-lock.json
 
 # Build artifacts
 *.zip
 /dist/
-/build/
+​/build/
 
-# OS files
+# MacOS, Windows, and general OS files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# IDE
+# IDE and editor specific files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Logs
+# Log files
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+error_log
+debug.log
 
-# Environment
+# Environment and configuration files
 .env
 .env.local
 wp-config-local.php
 docker-compose.yml
 *.local.php
 
-# Testing
+# Backup files
+*.bak
+*.old
+*.orig 
+*.saved
+*.backup
+
+# Testing-related files
 /coverage/
 phpunit.xml
 .phpunit.result.cache
 
-# Temporary
+# Temporary files and folders
 /tmp/
 /temp/check/
