@@ -1,0 +1,144 @@
+# Copyright (C) 2025 Marg Choco
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Sectorize - Custom Author Archives & Collective Authorship 0.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/Sectorize\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-17T12:18:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: custom-author-archive-by-sectorize\n"
+
+#. Plugin Name of the plugin
+#: sectorize.php
+msgid "Sectorize - Custom Author Archives & Collective Authorship"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: sectorize.php
+msgid "https://github.com/rancidbluecheese/sectorize"
+msgstr ""
+
+#. Description of the plugin
+#: sectorize.php
+msgid "Transforms author archives into sector-based content organization with structured data and SEO optimization."
+msgstr ""
+
+#. Author of the plugin
+#: sectorize.php
+msgid "Marg Choco"
+msgstr ""
+
+#. Author URI of the plugin
+#: sectorize.php
+msgid "https://ictstart.com"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:61
+#: includes/class-sectorize-admin.php:158
+msgid "Sectorize Settings"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:62
+msgid "Sectorize"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:131
+msgid "Sectorize rewrite rules successfully flushed."
+msgstr ""
+
+#: includes/class-sectorize-admin.php:162
+msgid "Permalink Management"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:164
+msgid "The Sectorize plugin adds a custom rewrite rule to WordPress to enable the /sector/{nickname} URL structure. If you have any issues with your sector archives not loading, click the button below to flush the rewrite rules."
+msgstr ""
+
+#: includes/class-sectorize-admin.php:168
+msgid "Flush Rewrite Rules"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:175
+msgid "Sector Nickname Usage"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:178
+msgid "How to Safely Change Nicknames for Sector Archives"
+msgstr ""
+
+#. translators: 1: opening strong tag, 2: closing strong tag, 3: br tag, 4: opening em tag, 5: closing em tag.
+#: includes/class-sectorize-admin.php:183
+#, php-format
+msgid "Each user's %1$ssector%2$s URL is based on their Nickname, not their login/username.%3$sTo change a sector's address, go to the user's profile by clicking their username or nickname above.%3$s%1$sEdit only the Nickname field%2$s—never change the login/username unless absolutely necessary, as this may break sector URLs and user access.%3$sAfter saving, the new sector URL will use the updated nickname.%3$s%4$sTip: To customize how a name appears publicly, adjust \\\"Display name publicly as\\\" in the user profile.%5$s"
+msgstr ""
+
+#. translators: 1: opening strong tag, 2: closing strong tag.
+#: includes/class-sectorize-admin.php:196
+#, php-format
+msgid "%1$sNote:%2$s Nicknames should be unique. If multiple users share the same nickname, the sector URL may not work as expected."
+msgstr ""
+
+#. translators: 1: opening strong tag, 2: closing strong tag, 3: br tag, 4: opening em tag, 5: closing em tag.
+#: includes/class-sectorize-admin.php:207
+#, php-format
+msgid "%1$sFriendly caution about changing login/usernames manually:%2$s%3$sIf you changed the WordPress username directly in phpMyAdmin or using WP-CLI to add a brand-style hint, please be aware:%3$s%4$sManual edits to usernames can affect login, URLs, or permissions, and are generally not recommended for regular management. Always use a unique Nickname for public branding and sector URLs. For best results, reserve manual username changes for special cases and document for team reference.%5$s"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:219
+msgid "The sector archive URL is based on the User's Nickname field. Ensure each user you want to group has a unique, URL-safe nickname set."
+msgstr ""
+
+#: includes/class-sectorize-admin.php:221
+msgid "Example: If the nickname is \"seo-team\", the URL will be: /sector/seo-team/"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:227
+msgid "User Name"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:228
+msgid "User Email"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:229
+msgid "Sector Nickname (Slug)"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:230
+msgid "Edit"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:251
+#: includes/class-sectorize-admin.php:307
+msgid "Not Set"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:256
+msgid "Edit User"
+msgstr ""
+
+#: includes/class-sectorize-admin.php:263
+msgid "No relevant users found."
+msgstr ""
+
+#: includes/class-sectorize-admin.php:280
+msgid "Sector Nickname"
+msgstr ""
+
+#. translators: 1: opening <a> tag, 2: closing <a> tag.
+#: sectorize.php:128
+#, php-format
+msgid "Sectorize activated successfully! Please visit the %1$sSectorize Settings page%2$s to confirm your permalinks have been flushed."
+msgstr ""
+
+#. translators: 1: new version, 2: old version, 3: opening link tag, 4: closing link tag.
+#: sectorize.php:153
+#, php-format
+msgid "Sectorize has been upgraded from version %2$s to %1$s! Please visit the %3$sSectorize Settings page%4$s to flush rewrite rules if needed."
+msgstr ""

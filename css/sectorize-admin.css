@@ -1,0 +1,10 @@
+.wrap .card {
+    width: 100%;
+    max-width: 100%;
+}
+.wrap .card p {
+    margin-bottom: 1em;
+}
+.wrap .card p:last-child {
+    margin-bottom: 0;
+}

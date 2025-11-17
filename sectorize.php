@@ -3,7 +3,7 @@
  * Plugin Name: Sectorize - Custom Author Archives & Collective Authorship
  * Plugin URI:  https://github.com/rancidbluecheese/sectorize
  * Description: Transforms author archives into sector-based content organization with structured data and SEO optimization.
- * Version:     0.2.0
+ * Version:     0.2.1
  * Requires at least: 6.0
  * Tested up to: 6.8
  * Requires PHP: 7.4
@@ -27,7 +27,7 @@ if ( defined( 'SECTORIZE_VERSION' ) ) {
 }
 
 // Constants.
-define( 'SECTORIZE_VERSION', '0.2.0' );
+define( 'SECTORIZE_VERSION', '0.2.1' );
 define( 'SECTORIZE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SECTORIZE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 

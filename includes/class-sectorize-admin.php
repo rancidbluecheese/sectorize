@@ -22,18 +22,33 @@ class Sectorize_Admin {
 	 * @return void
 	 */
 	public static function init() {
-		// Register the settings page.
 		add_action( 'admin_menu', array( __CLASS__, 'add_settings_page' ) );
-
-		// Handle the rewrite flush action BEFORE headers are sent.
 		add_action( 'admin_init', array( __CLASS__, 'handle_flush_rewrites' ) );
-
-		// Display admin notice after flush if needed.
 		add_action( 'admin_init', array( __CLASS__, 'show_flush_notice' ) );
-
-		// Add custom column to the Users table.
 		add_filter( 'manage_users_columns', array( __CLASS__, 'add_sector_column' ) );
 		add_action( 'manage_users_custom_column', array( __CLASS__, 'render_sector_column' ), 10, 3 );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_admin_assets' ) );
+	}
+
+	/**
+	 * Enqueue admin CSS/JS for Sectorize settings page.
+	 *
+	 * @param string $hook Current admin page.
+	 * @return void
+	 */
+	public static function enqueue_admin_assets( $hook ) {
+		// Only load on our settings page.
+		if ( 'settings_page_sectorize' !== $hook ) {
+			return;
+		}
+
+		// Enqueue CSS.
+		wp_enqueue_style(
+			'sectorize-admin',
+			plugin_dir_url( __DIR__ ) . 'css/sectorize-admin.css',
+			array(),
+			'1.0.0'
+		);
 	}
 
 	/**
@@ -141,19 +156,6 @@ class Sectorize_Admin {
 		?>
 		<div class="wrap">
 			<h1><?php esc_html_e( 'Sectorize Settings', 'custom-author-archive-by-sectorize' ); ?></h1>
-
-			<style>
-				.wrap .card {
-					width: 100%;
-					max-width: 100%;
-				}
-				.wrap .card p {
-					margin-bottom: 1em;
-				}
-				.wrap .card p:last-child {
-					margin-bottom: 0;
-				}
-			</style>
 
 			<!-- Permalink Management Card -->
 			<div class="card">
